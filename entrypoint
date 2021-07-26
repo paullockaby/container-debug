@@ -1,0 +1,3 @@
+#!/bin/sh
+
+trap exit TERM; while :; do sleep 4h & wait ${!}; done;
