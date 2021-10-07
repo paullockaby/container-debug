@@ -26,12 +26,12 @@ build:
 .PHONY: buildx
 buildx:
 	@echo "building multiarch image for ${IMAGE_ID}"
-	docker buildx build --platform linux/amd64,linux/arm64 -t $(IMAGE_ID) .
+	docker buildx build --platform linux/amd64,linux/arm64 -t $(IMAGE_ID) -t $(IMAGE_NAME):latest .
 
 .PHONY: push
 push:
 	@echo "pushing $(IMAGE_ID)"
-	docker buildx build --push --platform linux/amd64,linux/arm64 -t $(IMAGE_ID) .
+	docker buildx build --push --platform linux/amd64,linux/arm64 -t $(IMAGE_ID) -t $(IMAGE_NAME):latest .
 
 .PHONY: clean
 clean:
