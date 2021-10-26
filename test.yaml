@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: debug
+  labels:
+    service: debug
+    app.kubernetes.io/name: debug
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: debug
+  template:
+    metadata:
+      labels:
+        service: debug
+        app.kubernetes.io/name: debug
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: debug
+          image: ghcr.io/plockaby/docker-debug:latest
+          imagePullPolicy: Always
