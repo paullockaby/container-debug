@@ -1,4 +1,4 @@
-FROM debian:bullseye@sha256:6137c67e2009e881526386c42ba99b3657e4f92f546814a33d35b14e60579777
+FROM debian:bullseye@sha256:3f1d6c17773a45c97bd8f158d665c9709d7b29ed7917ac934086ad96f92e4510
 
 # github metadata
 LABEL org.opencontainers.image.source=https://github.com/plockaby/docker-debug
