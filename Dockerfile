@@ -1,5 +1,5 @@
-FROM amazon/aws-cli:latest@sha256:51758b92b41b2b5856236247777dad82c340bec43bdd4ba38295b5722a506445 AS awscli
-FROM debian:bullseye@sha256:2ce44bbc00a79113c296d9d25524e15d423b23303fdbbe20190d2f96e0aeb251 AS base
+FROM amazon/aws-cli:latest@sha256:d72e38a0d9df43d0c3961da0af5dba0fe29205d7baf974544d17ca7147c866a9 AS awscli
+FROM debian:bullseye@sha256:3e82b1af33607aebaeb3641b75d6e80fd28d36e17993ef13708e9493e30e8ff9 AS base
 
 # github metadata
 LABEL org.opencontainers.image.source=https://github.com/plockaby/docker-debug
@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.source=https://github.com/plockaby/docker-debug
 # install common tools
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -q update && apt-get -y upgrade && \
-    apt-get install -y --no-install-recommends time openssl gnutls-bin zip unzip bzip2 lynx vim vim-scripts curl whois telnet sqlite3 strace lsof less traceroute bash-completion socat busybox dnsutils net-tools tcpdump wget iputils-ping fping iproute2 ca-certificates nmap netcat-openbsd postgresql-client groff && \
+    apt-get install -y --no-install-recommends time openssl gnutls-bin zip unzip bzip2 lynx vim vim-scripts curl whois telnet sqlite3 strace lsof less traceroute bash-completion socat busybox dnsutils net-tools tcpdump wget iputils-ping fping iproute2 ca-certificates nmap netcat-openbsd postgresql-client groff procps && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # copy the aws cli over
