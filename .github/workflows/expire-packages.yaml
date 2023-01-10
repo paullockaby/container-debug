@@ -1,0 +1,17 @@
+name: Delete Old Packages
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: delete
+        uses: actions/delete-package-versions@v4
+        with:
+          package-type: "container"
+          package-name: "docker-debug"
+          min-versions-to-keep: 10
