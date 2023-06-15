@@ -1,5 +1,5 @@
-FROM amazon/aws-cli:latest@sha256:21e6273f0025755abfc842ca39e8ef4fed3d9d2ce61d93bb16ce86a6c1668ae5 AS awscli
-FROM debian:bookworm@sha256:fec4afb3946a3de54839a8b7da9c8026f1c4af4f9ae47d6d030aa567a77437a5 AS base
+FROM amazon/aws-cli:latest@sha256:bbac0b91dd0d871b40f96277f7030fb4a8f715060d0033819698097b1438ba58 AS awscli
+FROM debian:bookworm@sha256:d568e251e460295a8743e9d5ef7de673c5a8f9027db11f4e666e96fb5bed708e AS base
 
 # github metadata
 LABEL org.opencontainers.image.source=https://github.com/plockaby/docker-debug
