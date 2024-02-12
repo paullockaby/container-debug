@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: delete
-        uses: actions/delete-package-versions@v4
+        uses: actions/delete-package-versions@v5
         with:
           package-type: "container"
           package-name: "docker-debug"
