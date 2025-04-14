@@ -1,2 +1,2 @@
-# docker-debug
-A docker image for running debug in Kubernetes.
+# container-debug
+A container image for running debugging in Kubernetes.

@@ -20,5 +20,5 @@ spec:
       restartPolicy: Always
       containers:
         - name: debug
-          image: ghcr.io/plockaby/docker-debug:latest
+          image: ghcr.io/paullockaby/container-debug:latest
           imagePullPolicy: Always

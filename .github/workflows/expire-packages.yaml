@@ -13,5 +13,5 @@ jobs:
         uses: actions/delete-package-versions@v5
         with:
           package-type: "container"
-          package-name: "docker-debug"
+          package-name: "container-debug"
           min-versions-to-keep: 10
