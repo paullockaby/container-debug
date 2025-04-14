@@ -13,7 +13,7 @@ endif
 
 # get image id based on tag or commit
 IMAGE_VERSION := $(or $(IMAGE_TAG),$(IMAGE_COMMIT))
-IMAGE_NAME := "ghcr.io/plockaby/docker-debug"
+IMAGE_NAME := "ghcr.io/paullockaby/container-debug"
 IMAGE_ID := "${IMAGE_NAME}:${IMAGE_VERSION}"
 
 all: build
@@ -36,4 +36,13 @@ push:
 .PHONY: clean
 clean:
 	@echo "removing built image ${IMAGE_ID}"
+	find . -type f -name .DS_Store -print0 | xargs -0 rm -f
 	docker image rm -f $(IMAGE_NAME):latest $(IMAGE_ID)
+
+.PHONY: pre-commit
+pre-commit:
+	pre-commit install
+
+.PHONY: bump-check
+bump-check:
+	cz bump --dry-run

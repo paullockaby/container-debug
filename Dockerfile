@@ -1,8 +1,8 @@
-FROM amazon/aws-cli:latest@sha256:f97adbb24d242b12e528a95232e3942985e43fe24de7e27b150c3e4f2d5c495e AS awscli
-FROM debian:bookworm@sha256:b877a1a3fdf02469440f1768cf69c9771338a875b7add5e80c45b756c92ac20a AS base
+FROM amazon/aws-cli:latest@sha256:1c370efb8cf8ebc55cab0bf2f33ddf20e609ef04957f12a9658de4fa71a706e7 AS awscli
+FROM debian:bookworm@sha256:00cd074b40c4d99ff0c24540bdde0533ca3791edcdac0de36d6b9fb3260d89e2 AS base
 
 # github metadata
-LABEL org.opencontainers.image.source=https://github.com/plockaby/docker-debug
+LABEL org.opencontainers.image.source=https://github.com/paullockaby/container-debug
 
 # install common tools
 ENV DEBIAN_FRONTEND=noninteractive

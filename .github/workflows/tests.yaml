@@ -1,0 +1,26 @@
+name: Linters and Tests
+
+on:
+  workflow_call:
+
+jobs:
+  pre-commit:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13.x"
+          cache: "pip"
+
+      - name: Run linter
+        uses: pre-commit/action@v3.0.1
+        env:
+          SKIP: no-commit-to-branch
