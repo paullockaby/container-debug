@@ -1,4 +1,4 @@
-FROM amazon/aws-cli:latest@sha256:1c370efb8cf8ebc55cab0bf2f33ddf20e609ef04957f12a9658de4fa71a706e7 AS awscli
+FROM amazon/aws-cli:latest@sha256:1c2611ad4e3bff61024e073df192e829f2352295f6b47bc9b7583d09cd20b9f9 AS awscli
 FROM debian:bookworm@sha256:00cd074b40c4d99ff0c24540bdde0533ca3791edcdac0de36d6b9fb3260d89e2 AS base
 
 # github metadata
