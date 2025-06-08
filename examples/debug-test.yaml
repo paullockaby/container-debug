@@ -22,3 +22,5 @@ spec:
         - name: debug
           image: ghcr.io/paullockaby/container-debug:latest
           imagePullPolicy: Always
+          command: [ "/bin/bash", "-c", "--" ]
+          args: [ "while true; do exit 1; done;" ]
