@@ -1,3 +1,9 @@
+## v1.6.1 (2025-06-08)
+
+### Fix
+
+- **deps**: updating base container images
+
 ## v1.6.0 (2025-04-14)
 
 ### Feat
