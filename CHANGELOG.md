@@ -1,3 +1,9 @@
+## v1.6.2 (2025-10-14)
+
+### Fix
+
+- **deps**: updating base image to trixie and postgres to 18
+
 ## v1.6.1 (2025-06-08)
 
 ### Fix
