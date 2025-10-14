@@ -1,5 +1,5 @@
-FROM amazon/aws-cli:latest@sha256:389c5a5dbea530e5d914f174d96b8ad0bec0f5d9ad6999e3434cefeb77b44be0 AS awscli
-FROM debian:bookworm@sha256:bd73076dc2cd9c88f48b5b358328f24f2a4289811bd73787c031e20db9f97123 AS base
+FROM amazon/aws-cli:latest@sha256:add02f7d6409b39957bf6bf8d1b740b14867296757313297199c94ad17b4c6c2 AS awscli
+FROM debian:trixie@sha256:fd8f5a1df07b5195613e4b9a0b6a947d3772a151b81975db27d47f093f60c6e6 AS base
 
 # github metadata
 LABEL org.opencontainers.image.source=https://github.com/paullockaby/container-debug
@@ -13,9 +13,9 @@ RUN apt-get -q update && apt-get -y upgrade && \
 RUN curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc -o /tmp/ACCC4CF8.asc && \
     gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg /tmp/ACCC4CF8.asc && \
     rm -f /tmp/ACCC4CF8.asc && \
-    sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt bookworm-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && \
+    sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt trixie-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && \
     apt-get -q update && apt-get -y upgrade && \
-    apt-get install -y --no-install-recommends postgresql-17 && \
+    apt-get install -y --no-install-recommends postgresql-18 && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # copy the aws cli over
