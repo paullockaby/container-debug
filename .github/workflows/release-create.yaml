@@ -46,14 +46,14 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ssh-key: "${{ secrets.DEPLOY_KEY }}"
 
       - id: cz
         name: Create changelog and bump version
-        uses: commitizen-tools/commitizen-action@0.24.0
+        uses: commitizen-tools/commitizen-action@0.26.0
         with:
           changelog: true
           changelog_increment_filename: "changes.md"
