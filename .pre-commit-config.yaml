@@ -4,7 +4,7 @@ default_install_hook_types: [pre-commit, pre-push, commit-msg]
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-added-large-files
         stages: [pre-commit]
@@ -45,7 +45,7 @@ repos:
         stages: [pre-commit]
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.1.0
+    rev: v4.10.0
     hooks:
       - id: commitizen
       - id: commitizen-branch
