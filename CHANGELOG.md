@@ -1,3 +1,9 @@
+## v1.7.0 (2025-11-25)
+
+### Fix
+
+- updating container versions
+
 ## v1.6.2 (2025-10-14)
 
 ### Fix
