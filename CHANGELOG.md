@@ -1,3 +1,9 @@
+## v1.7.1 (2025-12-07)
+
+### Fix
+
+- updating dockerfile to latest version
+
 ## v1.7.0 (2025-11-25)
 
 ### Fix
