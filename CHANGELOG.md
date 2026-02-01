@@ -1,3 +1,9 @@
+## v1.8.0 (2026-02-01)
+
+### Fix
+
+- exceptions changed formatting
+
 ## v1.7.1 (2025-12-07)
 
 ### Fix
