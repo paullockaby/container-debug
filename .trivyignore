@@ -1,7 +1,7 @@
 # container does not have a USER command
 # this is ok, because it is meant to run as root
-AVD-DS-0002
+DS-0002
 
 # ignore things that are in the example yaml file
-AVD-KSV-0118
-AVD-KSV-0014
+KSV-0118
+KSV-0014
