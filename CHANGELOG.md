@@ -1,3 +1,9 @@
+## v1.8.1 (2026-04-16)
+
+### Fix
+
+- update trivy for security vulns
+
 ## v1.8.0 (2026-02-01)
 
 ### Fix
