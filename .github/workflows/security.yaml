@@ -13,13 +13,12 @@ jobs:
       contents: read
 
     steps:
-      - uses: actions/checkout@v6
+      - name: Check out the code
+        uses: actions/checkout@v6
 
+      # need to set up trivy on github
       - name: Setup trivy
         uses: aquasecurity/setup-trivy@v0.2.6
-        with:
-          cache: true
-          version: latest
 
       - name: Run trivy configuration checks
         run: |
