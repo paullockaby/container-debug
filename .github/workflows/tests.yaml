@@ -18,6 +18,7 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.14.x"
+          cache: "pip"
 
       - name: Run linter
         uses: pre-commit/action@v3.0.1
