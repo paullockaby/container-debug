@@ -1,5 +1,5 @@
 FROM amazon/aws-cli:latest@sha256:5ea67dda865fcf2fde06692c9a8a44fb8af0edf4a102c8c2f54f4a5225063c1c AS awscli
-FROM debian:trixie-20260406@sha256:3352c2e13876c8a5c5873ef20870e1939e73cb9a3c1aeba5e3e72172a85ce9ed AS base
+FROM debian:trixie-20260421@sha256:eed64cb67c3d1cbbe7405b6ee106d0e06b1ae9dafebc50a328753dcc3f4b1e50 AS base
 
 # github metadata
 LABEL org.opencontainers.image.source=https://github.com/paullockaby/container-debug
