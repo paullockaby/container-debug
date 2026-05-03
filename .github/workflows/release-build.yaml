@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
       packages: write
 
     steps:
@@ -32,14 +31,6 @@ jobs:
 
       - name: Build, tag, and push docker image to the GitHub Container Registry
         run: make push
-
-      - name: Update release
-        uses: softprops/action-gh-release@v3
-        with:
-          files: |
-            dist/*
-            CHANGELOG.md
-          tag_name: "${{ github.ref_name }}"
 
       - run: |
           echo "Finished building and pushing containers for version ${{ github.ref_name }}."

@@ -1,5 +1,7 @@
 > [!IMPORTANT]
 > If you are viewing this repository in GitHub, know that GitHub is [a mirror of the original repository](https://code.lockaby.org/public/container-debug).
+>
+> However, images are still kept in the GitHub Container Registry at ghcr.io/paullockaby/container-debug
 
 # container-debug
 A container image for running debugging in Kubernetes.
