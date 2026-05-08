@@ -1,4 +1,4 @@
-FROM amazon/aws-cli:latest@sha256:2614310500ace4ab8e6dbc12dd61a59d709bd9a45283e73e75215226265de972 AS awscli
+FROM amazon/aws-cli:latest@sha256:981a3a43de3e482f86385a8834232e440754326c2f4e159af17d2aa8707ff975 AS awscli
 FROM debian:trixie-20260421@sha256:35b8ff74ead4880f22090b617372daff0ccae742eb5674455d542bef71ef1999 AS base
 
 # github metadata
