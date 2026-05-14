@@ -14,7 +14,7 @@ jobs:
       - name: Check out the code
         uses: https://data.forgejo.org/actions/checkout@v6
 
-      - name: Set up python
+      - name: Set up Python
         uses: https://data.forgejo.org/actions/setup-python@v6
         with:
           python-version: "3.14.x"
