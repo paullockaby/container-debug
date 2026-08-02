@@ -1,3 +1,18 @@
+## v1.9.0 (2026-08-02)
+
+### Fix
+
+- do not use non-existent key in build
+- build containers correctly
+- wording
+- tryiing to get things to clone correctly
+- convert to run on forgejo
+- removing broken pipeline change
+- adding cache for github actions
+- adding renovate configuration
+- updating workflows for github and gitea
+- add a readme
+
 ## v1.8.1 (2026-04-16)
 
 ### Fix
