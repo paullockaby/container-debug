@@ -20,12 +20,12 @@ all: build
 
 .PHONY: build
 build:
-	@echo "building image for ${IMAGE_NAME}:latest"
+	@echo "building image for $(IMAGE_NAME):latest"
 	docker buildx build -t $(IMAGE_NAME):latest .
 
 .PHONY: buildx
 buildx:
-	@echo "building multiarch image for ${IMAGE_ID}"
+	@echo "building multiarch image for $(IMAGE_NAME):latest"
 	docker buildx build --platform linux/amd64,linux/arm64 -t $(IMAGE_ID) -t $(IMAGE_NAME):latest .
 
 .PHONY: push
