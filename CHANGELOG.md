@@ -1,3 +1,9 @@
+## v1.9.1 (2026-08-02)
+
+### Fix
+
+- building release configuration
+
 ## v1.9.0 (2026-08-02)
 
 ### Fix
